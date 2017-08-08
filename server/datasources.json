@@ -1,0 +1,12 @@
+{
+  "mysqlDB": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:anime123@localhost/ordering_system",
+    "database": "ordering_system",
+    "password": "anime123",
+    "name": "mysqlDB",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

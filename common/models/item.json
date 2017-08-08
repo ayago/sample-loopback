@@ -1,0 +1,46 @@
+{
+  "name": "Item",
+  "plural": "items",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql":{
+      "table":"item"
+    }
+  },
+  "properties": {
+    "referenceCode": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "mysql":{
+        "columnName":"reference_code"
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "mysql":{
+        "columnName":"name"
+      }
+    },
+    "codeName": {
+      "type": "string",
+      "required": true,
+      "mysql":{
+        "columnName":"code_name"
+      }
+    },
+    "description": {
+      "type": "string",
+      "mysql":{
+        "columnName":"description"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
