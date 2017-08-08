@@ -1,0 +1,50 @@
+{
+  "name": "ShoppingCart",
+  "plural": "shopping-carts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "table": "shopping_carts"
+    }
+  },
+  "properties": {
+    "referenceCode": {
+      "id": true,
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "reference_code"
+      }
+    },
+    "dateCreated": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now",
+      "mysql": {
+        "columnName": "date_created"
+      }
+    },
+    "dateUpdated": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now",
+      "mysql": {
+        "columnName": "date_updated"
+      }
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "\"NEW\"",
+      "mysql": {
+        "columnName": "status"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

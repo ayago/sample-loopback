@@ -1,0 +1,33 @@
+{
+  "name": "Order",
+  "plural": "orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "table": "orders"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "mysql": {
+        "columnName": "id"
+      }
+    },
+    "quantity": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "quantity"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
