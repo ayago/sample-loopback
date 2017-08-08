@@ -2,7 +2,7 @@
   "name": "Order",
   "plural": "orders",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true,
     "mysql": {
@@ -10,14 +10,6 @@
     }
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "mysql": {
-        "columnName": "id"
-      }
-    },
     "quantity": {
       "type": "number",
       "required": true,
@@ -27,6 +19,7 @@
     },
     "shoppingCartId": {
       "type": "string",
+      "id": 1,
       "required": true,
       "mysql": {
         "columnName": "shopping_cart_id"
@@ -34,6 +27,7 @@
     },
     "itemId": {
       "type": "number",
+      "id": 2,
       "required": true,
       "mysql": {
         "columnName": "item_id"
