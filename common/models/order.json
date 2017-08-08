@@ -24,10 +24,35 @@
       "mysql": {
         "columnName": "quantity"
       }
+    },
+    "shoppingCartId": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "shopping_cart_id"
+      }
+    },
+    "itemId": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "columnName": "item_id"
+      }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "shoppingCart": {
+      "type": "belongsTo",
+      "model": "ShoppingCart",
+      "foreignKey": "shoppingCartId"
+    },
+    "item": {
+      "type": "belongsTo",
+      "model": "Item",
+      "foreignKey": "itemId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

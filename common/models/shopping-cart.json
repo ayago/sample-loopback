@@ -11,8 +11,8 @@
   },
   "properties": {
     "referenceCode": {
-      "id": true,
       "type": "string",
+      "id": true,
       "required": true,
       "mysql": {
         "columnName": "reference_code"
@@ -44,7 +44,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "orders": {
+      "type": "hasMany",
+      "model": "Order",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
