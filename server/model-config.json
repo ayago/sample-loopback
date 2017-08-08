@@ -16,5 +16,13 @@
   "Item": {
     "dataSource": "mysqlDB",
     "public": true
+  },
+  "Order": {
+    "dataSource": "mysqlDB",
+    "public": true
+  },
+  "ShoppingCart": {
+    "dataSource": "mysqlDB",
+    "public": true
   }
 }

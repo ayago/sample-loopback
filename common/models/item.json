@@ -5,8 +5,8 @@
   "idInjection": true,
   "options": {
     "validateUpsert": true,
-    "mysql":{
-      "table":"item"
+    "mysql": {
+      "table": "items"
     }
   },
   "properties": {
@@ -14,28 +14,28 @@
       "type": "Number",
       "id": true,
       "required": true,
-      "mysql":{
-        "columnName":"reference_code"
+      "mysql": {
+        "columnName": "reference_code"
       }
     },
     "name": {
       "type": "string",
       "required": true,
-      "mysql":{
-        "columnName":"name"
+      "mysql": {
+        "columnName": "name"
       }
     },
     "codeName": {
       "type": "string",
       "required": true,
-      "mysql":{
-        "columnName":"code_name"
+      "mysql": {
+        "columnName": "code_name"
       }
     },
     "description": {
       "type": "string",
-      "mysql":{
-        "columnName":"description"
+      "mysql": {
+        "columnName": "description"
       }
     }
   },
