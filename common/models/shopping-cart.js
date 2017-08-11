@@ -7,6 +7,14 @@ module.exports = function(ShoppingCart) {
     ShoppingCart.forPayment = function(id, cb) {
         var filter = {where: {referenceCode: id}};
         ShoppingCart.findOne(filter, function(err, shoppingCart){
+
+            if(!shoppingCart){
+                var error = 
+                    new Error("Shopping cart: "+id+" doesn't exist");
+                error.status = 404;
+                return cb(error);
+            }
+
             if(shoppingCart.status == STATUS_CANCELLED){
                 var error = 
                     new Error("Cannot proceed shopping cart: "+id+" FOR PAYMENT since it is already CANCELLED");
@@ -18,7 +26,6 @@ module.exports = function(ShoppingCart) {
                 'status', 
                 STATUS_FOR_PAYMENT, 
                 function(err, instance){
-                    console.log('instance: '+err)
                     var response = 
                         'Successfully updated status of shopping cart: '
                         +id+' as '+STATUS_FOR_PAYMENT;
